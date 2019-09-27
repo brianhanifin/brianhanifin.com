@@ -28,7 +28,7 @@ twitter_username: brianhanifin
 github_username:  brianhanifin
 
 # Build settings
-theme: hacker
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 
