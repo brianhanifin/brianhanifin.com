@@ -181,7 +181,7 @@ binary_sensor:
     pin:
       number: $button_gpio
       inverted: True
-    name: $project Button
+    name: $project Wall Switch
     id: button
     filters:
       - delayed_on: 10ms
@@ -193,7 +193,6 @@ binary_sensor:
 
 switch:
   platform: gpio
-  name:  $project
   id: relay
   pin: $relay_gpio
   restore_mode: ALWAYS_ON
@@ -202,8 +201,7 @@ switch:
 ### Feedback
 
 Thank you for visiting my new blog! This is my first article, and I would really appreciate your feedback. Please stick around as I will be
- posting articles at least once a week for the next few months. I already have ideas set aside for 29 more articles on 
- [Home Assistant](/tags/home-assistant/) and [ESPHome](/tags/esphome/), not to mention potential tips on creating designs for laser cutters!
+ posting articles at least once a week for the next few months. I already have ideas set aside for 29 more articles on [Home Assistant](/tags/home-assistant/) and [ESPHome](/tags/esphome/), not to mention potential tips on creating designs for laser cutters!
 
 To hold you until my next article please visit my [ESPHome Github Repository][esphome-config].
 
