@@ -14,7 +14,7 @@ seo:
 1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered, while allowing use of the light switch on/off paddle.
 2. Provide a fail-over mechanism that allows the switch to operate even when Home Assistant is unavailable.
 
-#### Purchased Supplies
+### Purchased Supplies
 
 1. [Shelly1][shelly1] (or a Sonoff Basic, or other ESPHome compatible board).
 2. [Electrical wire][romex] (Romex 12/2, solid wire, 2 covered conductors plus one ground conductor).
