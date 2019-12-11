@@ -1,5 +1,5 @@
 ---
-title: Making a dumb light switch smart with Shelly1 and ESPHome and Home Assistant
+title: Making a dumb light switch smart with ESPHome and Home Assistant
 date: 2019-12-11 7:00:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
@@ -7,12 +7,20 @@ seo:
   date_modified: 2019-12-11 09:10:00 -0800
 ---
 
-## Project: Self-contained Hue light switch with offline fail-over 
+## Project: Self-contained Hue light switch with offline fail-over
 
 ### Goals
 
 1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered, while allowing use of the light switch on/off paddle.
 2. Provide a fail-over mechanism that allows the switch to operate even when Home Assistant is unavailable.
+
+#### Purchased Supplies
+
+1. [Shelly1][shelly1] (or a Sonoff Basic, or other ESPHome compatible board).
+2. [Electrical wire][romex] (Romex 12/2, solid wire, 2 covered conductors plus one ground conductor).
+3. Wire Nuts, [Non-twist Connectors][non-twist-connectors], or [Wago Connectors][wago].
+
+*The above links include my Amazon Affilite id. It is my hope that creating these articles might be able to pitch in a nickle here and there toward my hobby.*
 
 ### Goal #1: Make the dumb light smart
 
@@ -201,8 +209,12 @@ script:
 
 Thank you for visiting my new blog! This is my first article, and I would really appreciate your feedback. Please stick around as I will be
  posting articles at least once a week for the next few months. I already have ideas set aside for 29 more articles on 
- [Home Assistant](/tags/home-asssistant/) and [ESPHome](/tags/esphome/), not to mention potential for tips on creating designs for laser cutters!
+ [Home Assistant](/tags/home-assistant/) and [ESPHome](/tags/esphome/), not to mention potential tips on creating designs for laser cutters!
 
-To hold you until my next article, visit my ESPHome Github Repository.
+To hold you until my next article please visit my [ESPHome Github Repository][esphome-config].
 
-https://github.com/brianhanifin/esphome-config
+[esphome-config]: https://github.com/brianhanifin/esphome-config
+[shelly1]: https://www.amazon.com/gp/product/B07G33LNDY?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B07G33LNDY
+[romex]: https://www.amazon.com/gp/product/B0069F4CXQ?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B0069F4CXQ
+[non-twist-connectors]: https://www.amazon.com/gp/product/B07DW1QZF5/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07DW1QZF5&linkCode=as2&tag=brianhanifi0d-20&linkId=b9b4a1708258bbb1a213949082a0eb84
+[wago]: https://www.amazon.com/gp/product/B01N5JXOVF?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B01N5JXOVF
