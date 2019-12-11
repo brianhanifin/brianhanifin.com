@@ -4,7 +4,7 @@ date: 2019-12-11 7:00:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2019-12-11 08:35:00 -0800
+  date_modified: 2019-12-11 09:00:00 -0800
 ---
 
 ## Project: Self-contained Hue light switch with offline fail-over 
@@ -115,7 +115,57 @@ switch:
 
 ### Goal #2: Fail-over
 
-Basically, if the API is connected, then have Home Assistant toggle the lights. However, if the API is NOT connected (because Home Assistant is offline currently) then use the relay to toggle power to the lights.
+Luckily ESPHome provides a condition for checking if Home Assistant is connected: `api.connected`.
+
+```yaml
+if:
+  condition:
+    api.connected:
+  then:
+```
+
+Next, we check to see if the relay is on, and if it is off turn it on. We need the relay to be on before Home Assistant can turn our Home Assistant controlled smart lights on (in this case Phillips Hue).
+
+> **Note**
+> 
+> In theory it should always be on. However there is one scenerio, which will be revealed soon, in which the relay would be off.
+
+```yaml
+    - if:
+        condition:
+          switch.is_off: relay
+        then:
+          - switch.turn_on: relay
+
+          - homeassistant.service:
+              service: light.turn_on
+              data:
+                entity_id: ${hass_light}
+```
+
+If the relay is already on then ask Home Assistant to toggle the light on or off.
+
+```yaml
+
+    else:
+      - homeassistant.service:
+          service: light.toggle
+          data:
+            entity_id: ${hass_light}
+```
+
+Now we come to the "fail-over" bit. This is the *else* condition for when `api.connected` is false, meaning that ESPHome has lost connection to Home Assistant!
+
+```yaml
+else:
+  - switch.toggle: relay
+```
+
+This code fragment simply turns the Shelly1's internal relay from *on to off* or *off to on* when the physical light switch is toggled.
+
+### Solution
+
+Replace the `script:` section in the above code with this code fragment to enable to switch to continue to turn the lights on and off when Home Assistant is not available.
 
 ```yaml
 script:
