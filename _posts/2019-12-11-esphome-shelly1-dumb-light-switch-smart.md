@@ -11,7 +11,8 @@ seo:
 
 ### Goals
 
-1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered, while allowing use of the light switch on/off paddle.
+1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered, 
+while allowing use of the light switch on/off paddle.
 2. Provide a fail-over mechanism that allows the switch to operate even when Home Assistant is unavailable.
 
 ### Purchased Supplies
@@ -22,9 +23,9 @@ seo:
 
 *The above links include my Amazon Affilite id.*
 
-### Goal #1: Make the dumb light smart
+### Goal #1: Make the dumb light switch talk to Home Assistant
 
-I started with the following code fragment which uses the Home Assistant API to toggle the lights on or off when the toggle is flipped.
+I started with the following code fragment which uses the Home Assistant API to toggle the smart bulbs on or off when the toggle is flipped.
 
 ```yaml
 script:
@@ -38,7 +39,7 @@ script:
           - homeassistant.service:
               service: light.toggle
               data:
-                entity_id: ${hass_light}
+                entity_id: light.dining_room
         else:
           # When HA is unavailable, toggle the relay.
           - switch.toggle: relay
@@ -76,7 +77,7 @@ if:
   then:
 ```
 
-Next, we check to see if the relay is on, and if it is off turn it on. We need the relay to be on before Home Assistant can turn our Home Assistant controlled smart lights on (in this case Phillips Hue).
+Next, we check to see if the relay is on, and if it is off turn it on. We need the relay to be on before Home Assistant can turn on our smart bulbs on.
 
 > **Note**
 >
