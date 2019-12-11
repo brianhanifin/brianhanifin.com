@@ -6,52 +6,44 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Chirpy
-
-description: 'A text-based Jekyll theme.'
-
-# Replace with your domain, e.g. 'https://username.github.io'
-url: 'https://www.example.com'
-
-author: your_full_name                  # change to your full name
-
-avatar: /assets/img/sample/avatar.jpg   # Support network resources.
-
+title: Brian Hanifin
+description: >-
+  Stay-at-home dad, Home Assistant enthusiast, and constant tinkerer.
+url: 'https://brianhanifin.com'
+author: Brian Hanifin
+avatar: /assets/img/brian-emoji.png
 github:
-  username: github_username             # change to your github username
-
+  username: brianhanifin
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: brianhanifin
 
 social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
-  email: example@doamin.com             # change to your email address
+  name: Brian Hanifin                  # it will shows as the copyright owner in Footer
+  email: blog@brianhanifin.com
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/brianhanifin
+    - https://twitter.com/brianhanifin
+    - https://community.home-assistant.io/u/brianhanifin/summary
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+#google_site_verification: dCI8UCO8hrtyfnKPb5452HpLmoNA4ITtwGsjkysztX0
 
 #--------------------------
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: America/Los_Angeles
 
 google_analytics:
   # Fill with your Google Analytics ID
-  id: ''
+  id: 'UA-81748-9'
+
   # The Google Analytics pageviews switch.
   # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
   pv: false
-  # superProxy Url, only valid when `google_analytics.pv` is set to 'true'
   proxy_url: ''
 
 disqus:
-  shortname: 'disqus'   # Change to your Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+  shortname: 'brianhanifin'
   comments: true        # boolean type, the global switch for posts comments.
 
 # The year your website was first run.
