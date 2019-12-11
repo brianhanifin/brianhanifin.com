@@ -4,7 +4,7 @@ date: 2019-12-11 7:00:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2019-12-11 09:00:00 -0800
+  date_modified: 2019-12-11 09:10:00 -0800
 ---
 
 ## Project: Self-contained Hue light switch with offline fail-over 
@@ -197,8 +197,12 @@ script:
           - switch.toggle: relay
 ```
 
-### More ESPHome code
+### Feedback
 
-If you want to see my other ESPHome code, this is my Github Repository.
+Thank you for visiting my new blog! This is my first article, and I would really appreciate your feedback. Please stick around as I will be
+ posting articles at least once a week for the next few months. I already have ideas set aside for 29 more articles on 
+ [Home Assistant](/tags/home-asssistant/) and [ESPHome](/tags/esphome/), not to mention potential for tips on creating designs for laser cutters!
+
+To hold you until my next article, visit my ESPHome Github Repository.
 
 https://github.com/brianhanifin/esphome-config
