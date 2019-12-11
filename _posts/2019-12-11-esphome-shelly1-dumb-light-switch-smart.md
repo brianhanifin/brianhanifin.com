@@ -1,20 +1,22 @@
 ---
-title: Self-contained Hue light switch with offline fail-over 
+title: Making a dumb light switch smart with Shelly1 and ESPHome and Home Assistant
 date: 2019-12-11 7:00:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2019-12-11 07:15:01 -0800
+  date_modified: 2019-12-11 08:35:00 -0800
 ---
 
-## Goals
+## Project: Self-contained Hue light switch with offline fail-over 
+
+### Goals
 
 1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered, while allowing use of the light switch on/off paddle.
 2. Provide a fail-over mechanism that allows the switch to operate even when Home Assistant is unavailable.
 
-## Goal #1: Make the dumb light smart
+### Goal #1: Make the dumb light smart
 
-### Concept
+#### Concept
 
 I started with the following code fragment which uses the Home Assistant API to toggle the lights on or off when the toggle is flipped.
 
@@ -46,11 +48,11 @@ binary_sensor:
       - script.execute: hass_light_toggle
 ```
 
-### Problem
+#### Problem
 
 This worked pretty well, but after a several rounds of: repeatedly toggle the switch, restart home assistant, toggle some more… I learned that sometimes the light switch toggle wouldn’t change the light state (it would stay on or off on the first toggle).
 
-### Solution
+#### Solution
 
 I settled on a reasonably simple solution of turning the relay back on, and turing the light on in Home Assistant if the relay was off when the switch was next toggled.
 
@@ -111,7 +113,7 @@ switch:
     restore_mode: ALWAYS_ON
 ```
 
-## Goal #2: Fail-over
+### Goal #2: Fail-over
 
 Basically, if the API is connected, then have Home Assistant toggle the lights. However, if the API is NOT connected (because Home Assistant is offline currently) then use the relay to toggle power to the lights.
 
@@ -145,7 +147,7 @@ script:
           - switch.toggle: relay
 ```
 
-## More ESPHome code
+### More ESPHome code
 
 If you want to see my other ESPHome code, this is my Github Repository.
 
