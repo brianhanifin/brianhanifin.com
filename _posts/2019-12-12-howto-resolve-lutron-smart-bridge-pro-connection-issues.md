@@ -1,5 +1,5 @@
 ---
-title: Making a dumb light switch smart with ESPHome and Home Assistant
+title: HOWTO Resolve Lutron Smart Bridge Pro Connection Issues
 date: 2019-12-12 15:00:00 -0800
 categories: [Troubleshooting]
 tags: [Home Assistant]
