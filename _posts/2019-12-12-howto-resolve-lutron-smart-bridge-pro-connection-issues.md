@@ -1,10 +1,10 @@
 ---
 title: HOWTO Resolve Lutron Smart Bridge Pro Connection Issues
-date: 2019-12-12 15:00:00 -0800
+date: 2019-12-12 08:00:00 -0800
 categories: [Troubleshooting]
 tags: [Home Assistant]
 seo:
-  date_modified: 2019-12-12 15:00:00 -0800
+  date_modified: 2019-12-12 08:00:00 -0800
 ---
 
 ## Troubleshooting: HOWTO Resolve Lutron Smart Bridge Pro Connection Issues
