@@ -198,6 +198,10 @@ switch:
   restore_mode: ALWAYS_ON
 ```
 
+### Special Thanks
+
+Thank you to Mauricio Bonani of [bonani.tech][bonanitech] for encouraging me to create a blog as a knowledge dump that I can refer back to in the future. I hope others find some of my articles as useful and I have found Mauricio's articles.
+
 ### Feedback
 
 Thank you for visiting my new blog! This is my first article, and I would really appreciate your feedback. Please stick around as I will be
@@ -206,6 +210,8 @@ Thank you for visiting my new blog! This is my first article, and I would really
 To hold you until my next article please visit my [ESPHome Github Repository][esphome-config].
 
 [esphome-config]: https://github.com/brianhanifin/esphome-config
+[bonanitech]: https://bonani.tech/
+
 [shelly1]: https://www.amazon.com/gp/product/B07G33LNDY?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B07G33LNDY
 [romex]: https://www.amazon.com/gp/product/B0069F4CXQ?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B0069F4CXQ
 [non-twist-connectors]: https://www.amazon.com/gp/product/B07DW1QZF5/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07DW1QZF5&linkCode=as2&tag=brianhanifi0d-20&linkId=b9b4a1708258bbb1a213949082a0eb84
