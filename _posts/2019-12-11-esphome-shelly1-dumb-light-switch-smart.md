@@ -4,7 +4,7 @@ date: 2019-12-11 7:00:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2019-12-13 11:50:00 -0800
+  date_modified: 2019-12-13 13:10:00 -0800
 ---
 
 ## Project: Smart light switch with offline fail-over
@@ -25,39 +25,23 @@ while allowing use of the light switch on/off paddle.
 
 ### Goal #1: Make the dumb light switch talk to Home Assistant
 
-I started with the following code fragment which uses the Home Assistant API to toggle the smart bulbs on or off when the toggle is flipped.
+I started with the following [ESPHome][esphome] code fragment which uses the Home Assistant API to toggle the smart bulbs on or off when the wall switch is flipped. This worked great and I could have stopped there. But I want to make it work if Home Assistant wasn't available.
 
 ```yaml
-script:
-  - id: hass_light_toggle
-    then:
-      if:
-        condition:
-          api.connected:
-        then:
-          # Have Home Assistant toggle the light.
-          - homeassistant.service:
-              service: light.toggle
-              data:
-                entity_id: light.dining_room
-        else:
-          # When HA is unavailable, toggle the relay.
-          - switch.toggle: relay
-
 binary_sensor:
   - platform: gpio
     pin:
       number: GPIO5
-      inverted: True
     name: Wall Switch
     id: button
     filters:
       - delayed_on: 10ms
       - delayed_off: 10ms
-    on_press:
-      - script.execute: hass_light_toggle
-    on_release:
-      - script.execute: hass_light_toggle
+    on_state:
+      - homeassistant.service:
+          service: light.toggle
+          data:
+            entity_id: light.dining_room
 
 switch:
   platform: gpio
@@ -68,7 +52,7 @@ switch:
 
 ### Goal #2: Fail-over
 
-We need a way to check to see if Home Assistant is connected, so we can toggle the light with the relay instead. Luckily ESPHome provides a condition for checking if Home Assistant is connected: `api.connected`.
+So, we need a way to check to see if Home Assistant is connected, so we can toggle the light with the relay instead. Luckily ESPHome provides a condition for checking if Home Assistant is connected: [*api.connected*][api-connected].
 
 ```yaml
 if:
@@ -117,6 +101,9 @@ else:
 This code fragment simply turns the Shelly1's internal relay from *on to off* or *off to on* when the physical light switch is toggled.
 
 ### Final Code
+
+If you have ever done programming before you know may be aware a common practice is to define "constant" variables at the top of your code. Well, that is what [ESPHome's *substitutions* feature][substitutions] provides.
+
 
 ```yaml
 ---
@@ -213,6 +200,10 @@ To hold you until my next article please visit my [ESPHome Github Repository][es
 
 [esphome-config]: https://github.com/brianhanifin/esphome-config
 [bonanitech]: https://bonani.tech/
+
+[esphome]: https://esphome.io/
+[api-connected]: https://esphome.io/components/api.html
+[substitutions]: https://esphome.io/guides/configuration-types.html?#substitutions
 
 [shelly1]: https://www.amazon.com/gp/product/B07G33LNDY?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B07G33LNDY
 [romex]: https://www.amazon.com/gp/product/B0069F4CXQ?ie=UTF8&tag=brianhanifi0d-20&camp=1789&linkCode=xm2&creativeASIN=B0069F4CXQ
