@@ -143,7 +143,6 @@ ota:
   safe_mode: True
 
 logger:
-  level: INFO
 
 # Home Assistant API
 api:
