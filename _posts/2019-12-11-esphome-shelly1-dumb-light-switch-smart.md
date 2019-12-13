@@ -4,7 +4,7 @@ date: 2019-12-11 7:00:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2019-12-11 13:30:00 -0800
+  date_modified: 2019-12-13 11:50:00 -0800
 ---
 
 ## Project: Smart light switch with offline fail-over
@@ -196,6 +196,12 @@ switch:
   pin: $relay_gpio
   restore_mode: ALWAYS_ON
 ```
+
+### It's not a bug, its a feature
+
+The relay can only be turned off when Home Assistant is offline when the light was turned off by the wall switch. So, when Home Assistant comes back online that smart light will be unavailable until the wall switch is flipped again.
+
+Let's call this an intended side-effect. If we made the relay somehow turn back on automatically when it connects to Home Assistant again, the smart bulb would turn on! I can tell you from experience wives really don't like your Home Automation hobby when the bedroom lights turn on in the middle of the night!
 
 ### Special Thanks
 
