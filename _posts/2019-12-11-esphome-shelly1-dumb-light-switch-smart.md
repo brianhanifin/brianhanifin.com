@@ -11,7 +11,7 @@ seo:
 
 ### Goals
 
-1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered, 
+1. Create a light switch that is decoupled from power delivery so the 9 Hue Bulbs in my Dining Room Chandelier can always be powered,
 while allowing use of the light switch on/off paddle.
 2. Provide a fail-over mechanism that allows the switch to operate even when Home Assistant is unavailable.
 
@@ -104,7 +104,6 @@ This code fragment simply turns the Shelly1's internal relay from *on to off* or
 
 If you have ever done programming before you know may be aware a common practice is to define "constant" variables at the top of your code. Well, that is what [ESPHome's *substitutions* feature][substitutions] provides.
 
-
 ```yaml
 ---
 # Shelly 1 Power Module
@@ -127,7 +126,6 @@ wifi:
   password: !secret wifi_pass
 
 ota:
-  safe_mode: True
 
 logger:
 
