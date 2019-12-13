@@ -16,8 +16,9 @@
 }
 
 #archives li:nth-child(odd) {
-  background-color: #fff;
-  background-image: linear-gradient(to left, #fff, #fbfbfb, #fbfbfb, #fbfbfb, #fff);
+  // background-color: #fff;
+  background-color: rgb(42, 30, 107);
+  //background-image: linear-gradient(to left, #fff, #fbfbfb, #fbfbfb, #fbfbfb, #fff);
 }
 
 #archives li>div {
