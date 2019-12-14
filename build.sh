@@ -9,14 +9,14 @@ CMD="JEKYLL_ENV=production bundle exec jekyll b"
 DEST=$(realpath '_site')
 
 help() {
-   echo "Usage:"
-   echo
-   echo "   bash build.sh [options]"
-   echo
-   echo "Options:"
-   echo "   -b, --baseurl <URL>      The site relative url that start with slash, e.g. '/project'"
-   echo "   -h, --help               Print the help information"
-   echo "   -d, --destination <DIR>  Destination directory (defaults to ./_site)"
+  echo "Usage:"
+  echo
+  echo "   bash build.sh [options]"
+  echo
+  echo "Options:"
+  echo "   -b, --baseurl <URL>      The site relative url that start with slash, e.g. '/project'"
+  echo "   -h, --help               Print the help information"
+  echo "   -d, --destination <DIR>  Destination directory (defaults to ./_site)"
 }
 
 
