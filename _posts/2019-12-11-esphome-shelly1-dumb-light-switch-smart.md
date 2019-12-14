@@ -65,7 +65,7 @@ Next, we check to see if the relay is on, and if it is off turn it on. We need t
 
 > **Note**
 >
-> In theory the relay should always be on. However there is one scenerio, which will be revealed soon, in which the relay would be off.
+> In theory the relay should always be on. However there is one scenario, which will be revealed soon, in which the relay would be off.
 
 ```yaml
     - if:
