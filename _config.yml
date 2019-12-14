@@ -16,6 +16,8 @@ github:
   username: brianhanifin
 twitter:
   username: brianhanifin
+homeassistant:
+  username: brianhanifin
 
 social:
   name: Brian Hanifin
@@ -24,7 +26,7 @@ social:
     # The first element serves as the copyright owner's link
     - https://github.com/brianhanifin
     - https://twitter.com/brianhanifin
-    - https://community.home-assistant.io/u/brianhanifin/summary
+    - https://community.home-assistant.io/u/brianhanifin
 
 #google_site_verification: dCI8UCO8hrtyfnKPb5452HpLmoNA4ITtwGsjkysztX0
 
