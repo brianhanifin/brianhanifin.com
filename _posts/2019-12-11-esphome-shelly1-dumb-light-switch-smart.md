@@ -187,7 +187,7 @@ Let's call this an intended side-effect. If we made the relay somehow turn back 
 
 ### Special Thanks
 
-Thank you to Mauricio Bonani of [bonani.tech][bonanitech] for encouraging me to create a blog as a knowledge dump that I can refer back to in the future. I hope others find some of my articles as useful and I have found Mauricio's articles.
+Thank you to @mbonani of [bonani.tech][bonanitech] for encouraging me to create a blog as a knowledge dump that I can refer back to in the future. I hope others find some of my articles as useful and I have found Mauricio's articles.
 
 ### Feedback
 

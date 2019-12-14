@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-mentions'
   #gem 'jekyll-extlinks' # https://www.rubydoc.info/gems/jekyll-extlinks/0.0.5#Configuration
 end
 

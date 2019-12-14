@@ -54,7 +54,6 @@ first_run: 2019
 # boolean type, global switch for ToC in posts.
 toc: true
 
-
 # if your site type is Project Pages site, change below value to '/projectname'
 baseurl: ''
 
@@ -131,6 +130,10 @@ defaults:
         -
           label: Home
           url: /
+
+
+jekyll-mentions:
+  base_url: https://community.home-assistant.io/u/
 
 sass:
   sass_dir: /assets/css
