@@ -4,11 +4,10 @@ gem 'jekyll', '>=3.8.6'
 
 # Official Plugins
 group :jekyll_plugins do
-  gem 'jekyll-paginate'
-  gem 'jekyll-redirect-from'
-  gem 'jekyll-seo-tag'
   gem 'jekyll-mentions'
-  #gem 'jekyll-extlinks' # https://www.rubydoc.info/gems/jekyll-extlinks/0.0.5#Configuration
+  gem 'jekyll-paginate'
+  #gem 'jekyll-redirect-from'
+  gem 'jekyll-seo-tag'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
