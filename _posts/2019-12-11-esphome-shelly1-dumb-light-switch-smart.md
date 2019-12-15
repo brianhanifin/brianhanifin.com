@@ -5,6 +5,7 @@ categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
   date_modified: 2019-12-13 13:10:00 -0800
+sticky: true
 ---
 
 ## Project: Smart light switch with offline fail-over
@@ -187,7 +188,7 @@ Let's call this an intended side-effect. If we made the relay somehow turn back 
 
 ### Special Thanks
 
-Thank you to @mbonani of [bonani.tech][bonanitech] for encouraging me to create a blog as a knowledge dump that I can refer back to in the future. I hope others find some of my articles as useful and I have found Mauricio's articles.
+Thank you to Mauricio Bonani (@mbonani) of [bonani.tech][bonanitech] for encouraging me to create a blog as a knowledge dump that I can refer back to in the future. I hope others find some of my articles as useful and I have found Mauricio's articles.
 
 ### Feedback
 
