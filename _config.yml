@@ -2,14 +2,14 @@
 # My plugins
 #--------------------------
 
+
 # https://github.com/yihangho/emoji-for-jekyll
 emoji-blacklist:
 
 # https://github.com/riboseinc/jekyll-external-links/
 external_links:
-  #selector: 'main a'
   selector: '#main a'
-  #marker_html: "<span class='ico-ext'> <i class='fas fa-external-link-square-alt'></i></span>"
+  #marker_html: "<span class='ico-ext'><i class='fas fa-external-link-square-alt'></i></span>"
 
 # https://github.com/jekyll/jekyll-mentions
 jekyll-mentions:
@@ -25,7 +25,8 @@ jekyll-mentions:
 
 title: Brian Hanifin
 description: >-
-  Stay-at-home dad, Home Assistant enthusiast, and constant tinkerer.
+  Stay-at-home dad, Tinkerer,
+  Home Assistant enthusiast
 url: 'https://brianhanifin.com'
 author: Brian Hanifin
 avatar: /assets/img/brian-emoji.png
