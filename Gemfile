@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'jekyll', '>=3.8.6'
 
-# Official Plugins
 group :jekyll_plugins do
   # Github pages (always on) plugins list
   gem 'jekyll-coffeescript'
@@ -15,11 +14,13 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings'
   #gem 'jekyll-relative-links'
 
+  # Theme plugins
+  gem 'jekyll-seo-tag'
+
   # Additional plugins
   gem 'emoji_for_jekyll'
+  gem 'jekyll-external-links'
   gem 'jekyll-mentions'
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-stickyposts'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

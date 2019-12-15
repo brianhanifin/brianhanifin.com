@@ -1,3 +1,18 @@
+---
+# My plugins
+#############
+
+# https://github.com/yihangho/emoji-for-jekyll
+emoji-blacklist:
+
+# https://github.com/riboseinc/jekyll-external-links/
+external_links:
+
+# https://github.com/jekyll/jekyll-mentions
+jekyll-mentions:
+  base_url: https://community.home-assistant.io/u/
+
+
 # The Site Settings
 # © 2017-2019 Cotes Chung
 # MIT licensed
@@ -130,24 +145,6 @@ defaults:
         -
           label: Home
           url: /
-
-jekyll-mentions:
-  base_url: https://community.home-assistant.io/u/
-
-stickyposts:
-  #enabled: false   # Enable StickyPosts; default: true
-  #debug: true       # Show additional info; default: false
-  #sort: "blah"      # Optional sort field; default: "date", use "none" to avoid sorting
-  #reverse: true     # Ascending order, default: false
-  #retain: true      # Also show sticky posts in their original positions; default: false
-  #reverse_sticky: true    # Reverse the order of the sticky posts, e.g. oldest first; default: false
-
-  #collection: articles   # The collection to "stickify"; default "posts"
-
-  # Or multiple collections:
-  #collections:
-  # - posts
-  # - articles
 
 sass:
   sass_dir: /assets/css
