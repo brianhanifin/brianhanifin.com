@@ -1,23 +1,25 @@
 ---
 # My plugins
-#############
+#--------------------------
 
 # https://github.com/yihangho/emoji-for-jekyll
 emoji-blacklist:
 
 # https://github.com/riboseinc/jekyll-external-links/
 external_links:
+  #selector: 'main a'
+  selector: '#main a'
+  #marker_html: "<span class='ico-ext'> <i class='fas fa-external-link-square-alt'></i></span>"
 
 # https://github.com/jekyll/jekyll-mentions
 jekyll-mentions:
   base_url: https://community.home-assistant.io/u/
 
-
+#
 # The Site Settings
 # © 2017-2019 Cotes Chung
 # MIT licensed
-
-
+#
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
