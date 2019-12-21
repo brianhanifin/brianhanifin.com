@@ -5,7 +5,6 @@ categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
   date_modified: 2019-12-13 13:10:00 -0800
-sticky: true
 ---
 
 ## Project: Smart light switch with offline fail-over
