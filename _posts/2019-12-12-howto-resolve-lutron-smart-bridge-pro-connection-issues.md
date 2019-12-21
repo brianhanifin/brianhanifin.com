@@ -7,8 +7,6 @@ seo:
   date_modified: 2019-12-12 08:00:00 -0800
 ---
 
-## Troubleshooting: HOWTO Resolve Lutron Smart Bridge Pro Connection Issues
-
 I have a [Lutron Caseta Wireless Smart Bridge Pro (L-BDGPRO2-WH)][pro-bridge]. I was unable to connect to it with the app on my iPhone. I would get a “Cannot connect to your Lutron system.” error every time I tried.
 
 After lots of troubleshooting, I was able to resolve it. If you have this problem try the following:
