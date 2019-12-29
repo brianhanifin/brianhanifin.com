@@ -540,7 +540,8 @@ blockquote {
   background-color: rgb(42, 30, 107);
   border-left: 5px solid #eee;
   padding-left: 1rem;
-  color: #9a9a9a;
+  color: #fafafa;
+  font-style: italic;
 }
 
 .post-content blockquote a {
@@ -677,6 +678,7 @@ table thead+tbody tr {
 
 table thead+tbody tr:nth-child(2n + 1) {
   background-color: #f8f9fa;
+  color: #000
 }
 
 table thead th,
