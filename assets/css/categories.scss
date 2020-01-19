@@ -2,12 +2,13 @@
 ---
 /*!
   Style for Tab Categories
+  v2.0
+  https://github.com/cotes2020/jekyll-theme-chirpy
   © 2019 Cotes Chung
   MIT License
 */
 
 .categories {
-  background-color: rgb(42, 30, 107);
   margin-bottom: 2rem;
 }
 
@@ -17,7 +18,7 @@
 
 .categories .card-header>span>i:first-child,
 .categories .list-group-item>i {
-  //color: gray;
+  color: gray;
 }
 
 .categories .list-group-item {
@@ -47,7 +48,7 @@
 
 @media (hover: hover) { // only works on desktop
   .category-trigger:hover {
-    background-color: #e9ecef;
+    background-color: var(--categories-hover-bg, #e9ecef);
   }
 }
 
@@ -62,4 +63,26 @@
   -ms-transform: rotate(-90deg); /* IE 9 */
   -webkit-transform: rotate(-90deg); /* Safari 3-8 */
   transform: rotate(-90deg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .categories.card,
+  .list-group-item {
+    background-color: var(--card-bg);
+  }
+
+  .categories .card-header {
+    background-color: var(--card-header-bg);
+  }
+
+  .categories .list-group-item {
+    border-left: none;
+    border-right: none;
+    padding-left: 2rem;
+    border-color: var(--main-border);
+  }
+
+  .categories .list-group-item:last-child {
+    border-bottom-color: var(--card-bg);
+  }
 }

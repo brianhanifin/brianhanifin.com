@@ -1,32 +1,18 @@
----
-# My plugins
-#--------------------------
-
-
-# https://github.com/yihangho/emoji-for-jekyll
-emoji-blacklist:
-
-# https://github.com/riboseinc/jekyll-external-links/
-external_links:
-  selector: '#main a'
-  #marker_html: "<span class='ico-ext'><i class='fas fa-external-link-square-alt'></i></span>"
-
-# https://github.com/jekyll/jekyll-mentions
-jekyll-mentions:
-  base_url: https://community.home-assistant.io/u/
-
-#
 # The Site Settings
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT licensed
-#
+
+
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
 title: Brian Hanifin
-description: >-
+tagline: >-
   Stay-at-home dad, Tinkerer,
   Home Assistant enthusiast
+description: DIY Home Automation with Home Assistant.
 url: 'https://brianhanifin.com'
 author: Brian Hanifin
 avatar: /assets/img/brian-emoji.png
@@ -48,7 +34,24 @@ social:
 
 #google_site_verification: dCI8UCO8hrtyfnKPb5452HpLmoNA4ITtwGsjkysztX0
 
+# My plugins
 #--------------------------
+
+# https://github.com/yihangho/emoji-for-jekyll
+emoji-blacklist:
+
+# https://github.com/riboseinc/jekyll-external-links/
+external_links:
+  selector: '#main a'
+  #marker_html: "<span class='ico-ext'><i class='fas fa-external-link-square-alt'></i></span>"
+
+# https://github.com/jekyll/jekyll-mentions
+jekyll-mentions:
+  base_url: https://community.home-assistant.io/u/
+#--------------------------
+
+# if your site type is Project Pages site, change below value to '/projectname'
+baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: America/Los_Angeles
@@ -56,24 +59,23 @@ timezone: America/Los_Angeles
 google_analytics:
   # Fill with your Google Analytics ID
   id: 'UA-81748-9'
-
   # The Google Analytics pageviews switch.
   # DO NOT enable it unless you know how to deploy the Google Analytics superProxy.
   pv: false
+  # superProxy baseURL and URL, only valid when `google_analytics.pv` is set to 'true'
+  proxy_baseurl: ''
   proxy_url: ''
 
-disqus:
-  shortname: 'brianhanifin'
-  comments: true        # boolean type, the global switch for posts comments.
 
-# The year your website was first run.
+disqus:
+  comments: true
+  shortname: 'brianhanifin'
+
+# The year your website first ran.
 first_run: 2019
 
 # boolean type, global switch for ToC in posts.
 toc: true
-
-# if your site type is Project Pages site, change below value to '/projectname'
-baseurl: ''
 
 paginate: 10
 
@@ -148,6 +150,12 @@ defaults:
         -
           label: Home
           url: /
+  -
+    scope:
+      path: assets/data
+    values:
+      layout: compress
+
 
 sass:
   sass_dir: /assets/css
@@ -163,21 +171,23 @@ compress_html:
     envs: []
 
 exclude:
-  - vendor/       # Avoid Jekyll mistakenly read the vender directory on Travis-CI's VM .
+  - vendor        # Avoid Jekyll mistakenly read the vender directory on Travis-CI's VM .
   - Gemfile.lock
   - Gemfile
-  - run.sh
-  - build.sh
-  - init.sh
-  - pv.sh
+  - tools
+  - docs
 
 sitemap_exclude:  # Sitemap will exclude the following items.
-  - /norobots/
-  - /assets/
-  - /tabs/
-  - /categories/
-  - /tags/
-  - /posts/
-  - /404.html
-  - /redirects.json
-  - /search.json
+  fuzzy:
+    - /assets/
+  accurate:
+    - /norobots/
+    - /tabs/
+    - /categories/
+    - /tags/
+    - /posts/
+    - 404.html
+    - feed.xml
+    - sitemap.xml
+    - robots.txt
+    - redirects.json

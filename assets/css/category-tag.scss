@@ -2,6 +2,8 @@
 ---
 /*!
   Style for page Category and Tag
+  v2.0
+  https://github.com/cotes2020/jekyll-theme-chirpy
   © 2019 Cotes Chung
   MIT License
 */
@@ -51,7 +53,7 @@
 
 .dash {
   margin: 0 .5rem .6rem .5rem;
-  border-bottom: 2px dotted silver;
+  border-bottom: 2px dotted var(--main-border, silver);
 }
 
 @media all and (max-width: 576px) {

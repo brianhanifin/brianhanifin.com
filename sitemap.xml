@@ -1,6 +1,9 @@
 ---
 layout: compress
+
 # The Sitemap template
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
@@ -41,7 +44,30 @@ layout: compress
 
 {% for page in site.pages %}
 
-  {% if site.sitemap_exclude contains page.url %}
+  {% assign pass = false %}
+
+  {% for fuzzy in site.sitemap_exclude.fuzzy %}
+    {% if page.url contains fuzzy %}
+      {% assign pass = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% unless pass %}
+    {% for accurate in site.sitemap_exclude.accurate %}
+      {% assign len = accurate | size %}
+      {% capture beg %}{{ 0 | minus: len }}{% endcapture %}
+      {% capture tail %}{{ page.url | slice: beg, len }}{% endcapture %}
+
+      {% if tail == accurate %}
+        {% assign pass = true %}
+        {% break %}
+      {% endif %}
+
+    {% endfor %}
+  {% endunless %}
+
+  {% if pass %}
     {% continue %}
   {% endif %}
 
@@ -55,22 +81,22 @@ layout: compress
     {% endif %}
   {% endcapture %}
 
-  <url>
-  <loc>{{ site.url | append: site.baseurl | append: page.url | remove: "index.html" }}</loc>
-  <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
+   <url>
+    <loc>{{ site.url | append: site.baseurl | append: page.url | remove: "index.html" }}</loc>
+    <lastmod>{{ lastmod | date_to_xmlschema }}</lastmod>
 
-  {% if page.sitemap.changefreq %}
-    <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-  {% else %}
-    <changefreq>monthly</changefreq>
-  {% endif %}
+    {% if page.sitemap.changefreq %}
+      <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+    {% else %}
+      <changefreq>monthly</changefreq>
+    {% endif %}
 
-  {% if page.sitemap.priority %}
-    <priority>{{ page.sitemap.priority }}</priority>
-  {% else %}
-    <priority>0.3</priority>
-  {% endif %}
-</url>
+    {% if page.sitemap.priority %}
+      <priority>{{ page.sitemap.priority }}</priority>
+    {% else %}
+      <priority>0.3</priority>
+    {% endif %}
+  </url>
 
 {% endfor %}
 

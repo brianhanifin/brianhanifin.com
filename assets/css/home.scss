@@ -3,6 +3,8 @@
 
 /*!
   Style for Homepage
+  v2.0
+  https://github.com/cotes2020/jekyll-theme-chirpy
   © 2019 Cotes Chung
   MIT License
 */
@@ -39,7 +41,7 @@
 .post-preview .post-content {
   margin-top: .6rem;
   margin-bottom: .6rem;
-  // color: dimgray;
+  color: var(--text-color, dimgray);
 }
 
 /* Make preview shorter in Home page*/
@@ -53,7 +55,7 @@
 }
 
 .page-item .page-link {
-  color: #555555;
+  color: var(--text-color, #555555);
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
@@ -65,19 +67,22 @@
   -webkit-box-align: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--main-border, #f1f1f1);
   font-family: 'Lato', sans-serif;
+  background-color: var(--button-bg);
 }
 
 .page-item.active .page-link {
-  background-color: #2a408e;
-  box-shadow: 0 0 8px 0 #4b92d2 !important;
-  color: #f8f8f8;
+  background-color: var(--btn-active-bg, #2a408e);
+  border-color: var(--btn-active-border-color, #007bff);
+  box-shadow: 0 0 8px 0 var(--main-wrapper-bg, #4b92d2) !important;
+  color: var(--text-color, #f8f8f8);
 }
 
 .page-item.disabled .page-link {
   color: rgba(108, 117, 125, 0.57);
-  border-color: #f1f1f1;
+  border-color: var(--main-border, #f1f1f1);
+  background-color: var(--button-bg);
 }
 
 .page-item.disabled {
@@ -103,6 +108,13 @@
   }
 }
 
+/* Hide SideBar and TOC */
+@media all and (max-width: 830px) {
+  .pagination {
+    justify-content: center;
+  }
+}
+
 /* Sidebar is visible */
 @media all and (min-width: 831px) {
   .pagination {
@@ -119,9 +131,5 @@
 @media all and (max-width: 1200px) {
   #post-list {
     padding-right: 0;
-  }
-
-  .pagination {
-    justify-content: center;
   }
 }

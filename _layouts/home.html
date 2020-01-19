@@ -1,6 +1,8 @@
 ---
 layout: page
 # The Home page layout
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT Licensed
 ---
@@ -15,7 +17,7 @@ layout: page
     </h1>
     <div class="post-content">
       <p>
-      {{ post.content | strip_html | truncate: 200 }}
+      {{ post.content | strip_html | truncate: 200 | replace: '&', '&amp;' }}
       </p>
     </div>
 
@@ -24,13 +26,13 @@ layout: page
       <i class="far fa-clock fa-fw"></i>
       <span class="timeago" data-toggle="tooltip" title="{{ post.date | date: TOOLTIP_DATE }}">
       {{ post.date | date: POST_DATE }}
-      <i class="hidden">{{ post.date | date_to_xmlschema }}</i>
+      <i class="unloaded">{{ post.date | date_to_xmlschema }}</i>
       </span>
       <!-- page views -->
       {% if site.google_analytics.pv %}
       <i class="far fa-eye fa-fw"></i>
       <span id="pv_{{-post.title-}}" class="pageviews">
-        <i class="fas fa-spinner fa-spin"></i>
+        <i class="fas fa-spinner fa-spin fa-fw"></i>
       </span>
       {% endif %}
     </div>

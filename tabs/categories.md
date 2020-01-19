@@ -2,6 +2,8 @@
 title: Categories
 
 # All the Categories of posts
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
@@ -33,7 +35,7 @@ title: Categories
       {% else %}
         <i class="far fa-folder fa-fw"></i>
       {% endif %}
-        <a href="{{ site.baseurl }}/categories/{{ category_name | replace: ' ', '-' | downcase }}/">{{ category_name }}</a>
+        <a href="{{ site.baseurl }}/categories/{{ category_name | replace: ' ', '-' | downcase | url_encode }}/">{{ category_name }}</a>
         <!-- content count -->
         {% assign top_posts_size = site.categories[category_name] | size %}
         <span class="text-muted small font-weight-light pl-2">
@@ -63,7 +65,7 @@ title: Categories
       <ul class="list-group">
         {% for sub_category in sub_categories %}
         <li class="list-group-item">
-          <i class="far fa-folder fa-fw"></i>&nbsp;<a href="{{ site.baseurl }}/categories/{{ sub_category | replace: ' ', '-' | downcase }}/">{{ sub_category }}</a>
+          <i class="far fa-folder fa-fw"></i>&nbsp;<a href="{{ site.baseurl }}/categories/{{ sub_category | replace: ' ', '-' | downcase | url_encode }}/">{{ sub_category }}</a>
           {% assign posts_size = site.categories[sub_category] | size %}
           <span class="text-muted small font-weight-light pl-2">{{ posts_size }}
             post{% if posts_size > 1 %}s{% endif %}

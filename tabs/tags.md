@@ -2,6 +2,8 @@
 title: Tags
 
 # All the Tags of posts.
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
 # © 2017-2019 Cotes Chung
 # MIT License
 ---
@@ -20,7 +22,7 @@ title: Tags
 
 {% for t in sorted_tags %}
   <div>
-    <a class="tag" href="{{ site.baseurl }}/tags/{{ t | downcase | replace: ' ', '-' }}/">{{ t }}<span class="text-muted">{{ site.tags[t].size }}</span></a>
+    <a class="tag" href="{{ site.baseurl }}/tags/{{ t | replace: ' ', '-' | downcase | url_encode }}/">{{ t }}<span class="text-muted">{{ site.tags[t].size }}</span></a>
   </div>
 {% endfor %}
 
