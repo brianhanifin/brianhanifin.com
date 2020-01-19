@@ -72,7 +72,7 @@ ex. Get the nth Monday of May.<br/>
 2nd: `{% raw %}{{ nth_dayofmonth(2, "Monday", 5, 2020) }}{% endraw %}`<br/>
 Last: `{% raw %}{{ nth_dayofmonth("last", "Monday", 5) }}{% endraw %}`
 
-Reference: https://www.bennadel.com/blog/1446-getting-the-nth-occurrence-of-a-day-of-the-week-for-a-given-month.htm
+Reference: [bennadel.com](https://www.bennadel.com/blog/1446-getting-the-nth-occurrence-of-a-day-of-the-week-for-a-given-month.htm)
 ```yaml{% raw %}
 {%- macro nth_dayofmonth(nth, dayofweek, month, year=now().strftime("%Y")) -%}
   {%- set dayofweek = dayofweek_number(dayofweek)|int -%}
