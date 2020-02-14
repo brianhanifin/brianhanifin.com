@@ -4,7 +4,7 @@ date: 2020-02-13 12:30:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2020-02-13 12:30:00 -0800
+  date_modified: 2020-02-14 10:30:00 -0800
 #image: /assets/img/2020-02-13-irrigation-controller/06t.jpg
 ---
 
