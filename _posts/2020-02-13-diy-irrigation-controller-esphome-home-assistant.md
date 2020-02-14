@@ -5,6 +5,7 @@ categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
   date_modified: 2020-02-13 12:30:00 -0800
+#image: /assets/img/2020-02-13-irrigation-controller/06t.jpg
 ---
 
 <div style="float:right;"><img src="/assets/img/2020-02-13-irrigation-controller/06t.jpg"></div>This project took a long time to put together. There were a lot more frustrations than I expected. At times I had concerns about being able to pull it off. But I am prouder of this accomplishment, than anything else I have done with Home Assistant!!!
@@ -341,6 +342,27 @@ The source code to my Home Assistant Configuration can be found [in this GitHub 
 ## Home Assistant Community Thanks
 
 Thank you to Home Assistant Community members: @jlax47, @nickrout, @glmnet, and @risk. Your assistance was crucial to my success with this project!
+
+<div style="margin-top:3em;">
+<style type="text/css">
+div#amzn-native-ad-0 {
+  left: 0 !important;
+}
+</style>
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_search_bar = "true";
+amzn_assoc_tracking_id = "brianhanifi0d-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_title = "Components mentioned in this article";
+amzn_assoc_linkid = "37a4f3f0677f4d551439a4f5d4e1c92b";
+amzn_assoc_asins = "B0793NYYPZ,B0007N5LJK,B000VYGMF2,B001H1NGOI";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+</div>
 
 ---
 

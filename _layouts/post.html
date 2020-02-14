@@ -51,6 +51,9 @@ layout: default
         {% if page.image %}
         <img src="{{ page.image }}">
         {% endif %}
+        <blockquote>
+            <i><b>Disclosure</b>: This article may contain affiliate links. If you decide to make a purchase, I'll make a small commission at no extra cost to you.</i>
+        </blockquote>
         <!-- Add lozad class into image tags. see: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         {% if content contains '<img src=' %}
           {% capture loading %}{{ "/assets/img/commons/loading.png" | relative_url }}{% endcapture %}

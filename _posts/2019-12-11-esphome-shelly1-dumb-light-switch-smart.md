@@ -21,8 +21,6 @@ while allowing use of the light switch on/off paddle.
 2. [Electrical wire][romex] (Romex 12/2, solid wire, 2 covered conductors plus one ground conductor).
 3. Wire Nuts, [Non-twist Connectors][non-twist-connectors], or [Wago Connectors][wago].
 
-*The above links include my Amazon Affilite id.*
-
 ### Goal #1: Make the dumb light switch talk to Home Assistant
 
 I started with the following [ESPHome][esphome] code fragment which uses the Home Assistant API to toggle the smart bulbs on or off when the wall switch is flipped. This worked great and I could have stopped there. But I want to make it work if Home Assistant wasn't available.
