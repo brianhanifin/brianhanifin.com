@@ -80,7 +80,7 @@ The basic operation -- turning relays on and off -- isn't much different than tu
 
 ### Countdown timer
 
-Rather than using a simple [`delay action`][esphome-delay], I used @broxy70's way of keep track of a countdown timer (see [github][inspiration2]), so I could display the remaining time in Home Assistant. The following is a snippet of code that tracks the Zone1's time remaining and exposes the current value as a sensor. This code will also turn off the relay when the countdown reaches zero.
+Rather than using a simple [`delay action`][esphome-delay], I used [@broxy70's countdown timer code][inspiration2], so I could display the remaining time in Home Assistant. The following is a snippet of code that tracks the Zone1's time remaining and exposes the current value as a sensor. This code will also turn off the relay when the countdown reaches zero.
 
 > Note: `lambda` is raw Arduino/C++ code.
 
