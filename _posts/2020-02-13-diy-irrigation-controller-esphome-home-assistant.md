@@ -4,8 +4,8 @@ date: 2020-02-13 12:30:00 -0800
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2020-02-14 10:30:00 -0800
-#image: /assets/img/2020-02-13-irrigation-controller/06t.jpg
+  date_modified: 2020-02-14 14:45:00 -0800
+image: /assets/img/2020-02-13-irrigation-controller/controller.jpg
 ---
 
 <div style="float:right;"><img src="/assets/img/2020-02-13-irrigation-controller/06t.jpg"></div>This project took a long time to put together. There were a lot more frustrations than I expected. At times I had concerns about being able to pull it off. But I am prouder of this accomplishment, than anything else I have done with Home Assistant!!!
