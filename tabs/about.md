@@ -8,4 +8,8 @@ title: About
 # MIT License
 ---
 
-Stay-at-home dad, Home Assistant enthusiast, and constant tinkerer.
+Find more information on my projects and myself:
+* [Home Assistant Configuration](https://github.com/brianhanifin/Home-Assistant-Config)
+* [ESPHome Configuration](https://github.com/brianhanifin/esphome-config)
+* [Home Assistant: @BrianHanifin](https://community.home-assistant.io/u/brianhanifin) My Home Assistant Community Posts
+* [Twitter: @BrianHanifin](https://twitter.com/brianhanifin) I also discuss Home Assistant on twitter.
