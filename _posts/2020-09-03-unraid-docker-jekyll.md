@@ -1,10 +1,10 @@
 ---
 title: Jekyll Local Testing using Docker on Unraid
-date: 2020-09-03 15:00:00 -0800
+date: 2020-09-03 15:00:00
 categories: [Homelab]
 tags: [Jekyll, Unraid]
 seo:
-  date_modified: 2020-09-03 15:00:00 -0800
+  date_modified: 2020-09-03 15:00:00
 image: /assets/img/2020-09-03-unraid-docker-jekyll/unraid-docker-jekyll-serve-advanced.png
 ---
 
