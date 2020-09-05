@@ -4,7 +4,7 @@ date: 2020-09-04 20:00:00 -800
 categories: [Project]
 tags: [Home Assistant, Zigbee, Jinja]
 seo:
-  date_modified: 2020-09-04 20:00:00 -800
+  date_modified: 2020-09-04 20:10:00 -800
 image: /assets/img/2020-09-04-zha-double-click/ikea-remote.jpg
 ---
 
@@ -196,7 +196,6 @@ script:
 # ^^^ Unremark the last line to show the timing between clicks during debugging.
 {% endraw %}```
 
-## Wrapping up
+## Discuss
 
-IKEA doesn't have an affiliate program, so no I won't get any bonuses from any Trådfri Remotes you buy. :) Post any
-questions on the Home Assistant Community post or below and I will be happy to answer any questions.
+Post any questions [on the Home Assistant Community post](https://community.home-assistant.io/t/ikea-tradfri-remote-zha-double-and-triple-click/224535) or below and I will be happy to answer any questions.
