@@ -1,10 +1,10 @@
 ---
 title: "IKEA Trådfri Remote: ZHA Double (and Triple) Click"
-date: 2020-09-04 20:00:00 -800
+date: 2020-09-04 20:00:00 -0800
 categories: [Project]
 tags: [Home Assistant, Zigbee, Jinja]
 seo:
-  date_modified: 2020-09-04 20:10:00 -800
+  date_modified: 2020-09-04 20:10:00 -0800
 image: /assets/img/2020-09-04-zha-double-click/ikea-remote.jpg
 ---
 
