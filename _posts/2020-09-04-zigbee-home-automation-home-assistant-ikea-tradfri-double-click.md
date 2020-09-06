@@ -152,7 +152,7 @@ automation:
       ##########################################################
 {% endraw %}```
 
-## script.zha_store_click
+## Reusable logic in a script
 
 ```{% raw %}
 # The click data is stored in CSV fomat in the order: device_ieee, command, click, click_count
@@ -195,6 +195,13 @@ script:
 
 # ^^^ Unremark the last line to show the timing between clicks during debugging.
 {% endraw %}```
+
+## Source
+You can find full versions of my automation and script at the links below. My full automation handles multiple
+remotes instead of just the one in the below example.
+ * [automation.zha_button_click](https://github.com/brianhanifin/Home-Assistant-Config/blob/0b8fe58881201655cce7a56e4317d5b221b869b3/automations/buttons/zha_button_click.yaml)
+
+ * [script.zha_store_click](https://github.com/brianhanifin/Home-Assistant-Config/blob/0b8fe58881201655cce7a56e4317d5b221b869b3/scripts/buttons/zha_store_click.yaml)
 
 ## Discuss
 
