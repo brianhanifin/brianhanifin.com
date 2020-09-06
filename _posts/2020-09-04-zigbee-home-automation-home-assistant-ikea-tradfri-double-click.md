@@ -4,15 +4,27 @@ date: 2020-09-04 20:00:00 -0800
 categories: [Project]
 tags: [Home Assistant, Zigbee, Jinja]
 seo:
-  date_modified: 2020-09-04 20:10:00 -0800
+  date_modified: 2020-09-06 11:30:00 -0800
 image: /assets/img/2020-09-04-zha-double-click/ikea-remote.jpg
 ---
+
+## Updates
+
+* **2020-09-05**
+  * [Source](#source): Added section to share snapshots of full multiple remote automation and my full script.
+
+* **2020-09-06**
+  * [Additional functionality](#additional-functionality): Added section to document the double-click and long press 
+functionality I added to the top and bottom buttons on the remote.
+  * [Source](#source): Updated the link to an updated snapshot of my full multiple remote automation.
+
+---
+
+## Introduction
 
 I recently picked up an [IKEA Trådfri Remote](https://www.ikea.com/us/en/p/tradfri-remote-control-00443130/) to try out. 
 My computer is in the Living Room and I thought it would be nice to have a multi function remote to manage the fan and 
 lights around me.
-
-## 5 button remote
 
 The remote has five buttons to do whatever I want with. Using Home Assistant this become a custom "Scene Controller".
 Initially I setup the large power button in the middle to toggle the fan on and off. The top and bottom "brightness"
@@ -25,7 +37,6 @@ assigned light's brightness by 20%.
 Nice! That brings me up to 9 "scenes" that I can control with this remote.
 
 ## Double click?
-
 Well, I thought it would be nice to be able to toggle the TV on and off. After checking though `zha_event` does not
 capture double taps of any of the IKEA remote's buttons. Darn.
 
@@ -34,7 +45,6 @@ One thought kept nagging at the back of my mind though. Although `zha_event` did
 was probably a way to exploit that.
 
 ## How to store the information needed for later comparison?
-
 After a few hours (and a couple of breaks) I figured it out! Storing the previous click's timestamp to compare it with the
 current click's timestamp. The trick was to find a way to store the data. At first I used the custom_component 
 [hass-variables](https://github.com/rogro82/hass-variables) to store the timestamp of the current click, device_ieee, 
@@ -55,7 +65,6 @@ during testing! For example it told me 1 second not only felt too long to wait f
 felt like too long to wait for a second click. I found half of a second to be a pretty sweet spot between the two.
 
 ## Example Automation
-
 Below is an example of the automation I use. In this section of the code that handles the large button in the middle.
 Theoretically it can have an unlimited number of clicks. I have held it to 3 for now: 1x - Toggle Fan, 2x - Toggle TV,
 3x - Toggle Front Door Lock.
@@ -196,13 +205,31 @@ script:
 # ^^^ Unremark the last line to show the timing between clicks during debugging.
 {% endraw %}```
 
-## Source
-You can find full versions of my automation and script at the links below. My full automation handles multiple
-remotes instead of just the one in the below example.
- * [automation.zha_button_click](https://github.com/brianhanifin/Home-Assistant-Config/blob/0b8fe58881201655cce7a56e4317d5b221b869b3/automations/buttons/zha_button_click.yaml)
+## Additional functionality
+So far I only covered how to capture multi-clicking on the center button. This also works on the other 4 buttons as well!
+This means we can use this remote for a practically unlimited number of actions!
 
- * [script.zha_store_click](https://github.com/brianhanifin/Home-Assistant-Config/blob/0b8fe58881201655cce7a56e4317d5b221b869b3/scripts/buttons/zha_store_click.yaml)
+So now we can use this remote for:
+
+  * 5 single click actions
+  * 4 long press actions
+  * 5 double click actions
+  * 5 triple click actions
+  * etc.
+
+For example, I setup my top and bottom buttons to:
+
+  * 1 click = turn on/off primary lamp
+  * 2 clicks = turn on/off table lamp
+  * Long press up = increase primary and/or table lamp brightness by 20%
+  * Long press down = decrease primary and/or table lamp brightness by 20%
+
+## Source
+You can find full versions of my universal ZHA remote automation and script at the links below. My full automation handles multiple
+remotes instead of just the one in the below example.
+ * Snapshot 2020-09-06: [automation.zha_button_click](https://github.com/brianhanifin/Home-Assistant-Config/blob/0dced1b953f6b921ec3ddc4e600a7b3345e48f37/automations/buttons/zha_button_click.yaml)
+
+ * Snapshot 2020-09-05: [script.zha_store_click](https://github.com/brianhanifin/Home-Assistant-Config/blob/0b8fe58881201655cce7a56e4317d5b221b869b3/scripts/buttons/zha_store_click.yaml)
 
 ## Discuss
-
 Post any questions [on the Home Assistant Community post](https://community.home-assistant.io/t/ikea-tradfri-remote-zha-double-and-triple-click/224535) or below and I will be happy to answer any questions.
