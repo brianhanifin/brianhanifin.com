@@ -8,6 +8,10 @@ seo:
 image: /assets/img/2020-09-04-zha-double-click/ikea-remote.jpg
 ---
 
+I recently picked up an [IKEA Trådfri Remote](https://www.ikea.com/us/en/p/tradfri-remote-control-00443130/) to try out. 
+My computer is in the Living Room and I thought it would be nice to have a multi function remote to manage the fan and 
+lights around me.
+
 ## Updates
 
 * **2020-09-05**
@@ -18,13 +22,7 @@ image: /assets/img/2020-09-04-zha-double-click/ikea-remote.jpg
 functionality I added to the top and bottom buttons on the remote.
   * [Source](#source): Updated the link to an updated snapshot of my full multiple remote automation.
 
----
-
-## Introduction
-
-I recently picked up an [IKEA Trådfri Remote](https://www.ikea.com/us/en/p/tradfri-remote-control-00443130/) to try out. 
-My computer is in the Living Room and I thought it would be nice to have a multi function remote to manage the fan and 
-lights around me.
+## 5 button remote
 
 The remote has five buttons to do whatever I want with. Using Home Assistant this become a custom "Scene Controller".
 Initially I setup the large power button in the middle to toggle the fan on and off. The top and bottom "brightness"
