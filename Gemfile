@@ -21,6 +21,7 @@ group :jekyll_plugins do
   gem 'emoji_for_jekyll'
   gem 'jekyll-external-links'
   gem 'jekyll-mentions'
+  gem 'jekyll_github_sample'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
