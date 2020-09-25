@@ -1,10 +1,10 @@
 ---
 title: HOWTO Resolve Lutron Smart Bridge Pro Connection Issues
-date: 2019-12-12 08:00:00 -0800
+date: 2019-12-12 08:00:00 -0700
 categories: [Troubleshooting]
 tags: [Home Assistant]
 seo:
-  date_modified: 2019-12-12 08:00:00 -0800
+  date_modified: 2019-12-12 08:00:00 -0700
 ---
 
 I have a [Lutron Caseta Wireless Smart Bridge Pro (L-BDGPRO2-WH)][pro-bridge]. I was unable to connect to it with the app on my iPhone. I would get a “Cannot connect to your Lutron system.” error every time I tried.

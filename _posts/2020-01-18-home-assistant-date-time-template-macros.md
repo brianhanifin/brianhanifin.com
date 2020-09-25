@@ -1,10 +1,10 @@
 ---
 title: "Home Assistant Template Macros: Date and Time"
-date: 2020-01-18 21:00:00 -0800
+date: 2020-01-18 21:00:00 -0700
 categories: [Code Snippets]
 tags: [Home Assistant, Jinja]
 seo:
-  date_modified: 2020-01-18 21:00:00 -0800
+  date_modified: 2020-01-18 21:00:00 -0700
 ---
 
 Over time I have created a large library of date and time manipulation code which are used in my

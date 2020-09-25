@@ -1,10 +1,10 @@
 ---
 title: Alexa Alarm Wake Up Light
-date: 2019-12-21 11:00:00 -0800
+date: 2019-12-21 11:00:00 -0700
 categories: [Project]
 tags: [Home Assistant]
 seo:
-  date_modified: 2019-12-21 11:00:00 -0800
+  date_modified: 2019-12-21 11:00:00 -0700
 ---
 
 Thanks to the wonderful [Alexa Media Player][alexa_media_player] custom component,

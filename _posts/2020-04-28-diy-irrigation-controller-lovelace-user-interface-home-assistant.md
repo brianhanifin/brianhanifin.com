@@ -1,10 +1,10 @@
 ---
 title: "DIY Irrigation Controller: Lovelace User Interface"
-date: 2020-04-28 13:00:00 -0800
+date: 2020-04-28 13:00:00 -0700
 categories: [Project]
 tags: [Lovelace, Home Assistant]
 seo:
-  date_modified: 2020-04-28 13:00:00 -0800
+  date_modified: 2020-04-28 13:00:00 -0700
 image: /assets/img/2020-02-13-irrigation-controller/ui1t.png
 ---
 

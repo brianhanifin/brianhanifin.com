@@ -1,10 +1,10 @@
 ---
 title: "Inovelli Z-Wave Dimmer Status LED in Home Assistant"
-date: 2020-01-21 19:45:00 -0800
+date: 2020-01-21 19:45:00 -0700
 categories: [Project]
 tags: [Home Assistant, Jinja, Z-Wave]
 seo:
-  date_modified: 2020-09-19 07:00:00 -0800
+  date_modified: 2020-09-19 07:00:00 -0700
 ---
 
 <div style="float: right"><img src="//ir-na.amazon-adsystem.com/e/ir?t=brianhanifi0d-20&l=am2&o=1&a=B07S1BMMGH"><img src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B07S1BMMGH&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=brianhanifi0d-20"></div>Recently I ordered [Inovelli (Red Series) Z-Wave Dimmer][amazon-inovelli-dimmer] from Amazon. I primarily got it because for the ability to take actions based on up to 5 taps up (and down). I set it up to toggle one lamp with one tap, and toggle all three lamps with a double tap.

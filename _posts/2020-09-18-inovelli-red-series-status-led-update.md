@@ -1,10 +1,10 @@
 ---
 title: Inovelli Red Series Status LED Script Update
-date: 2020-09-18 15:00:00 -0800
+date: 2020-09-18 15:00:00 -0700
 categories: [Project]
 tags: [Home Assistant, Jinja, Z-Wave]
 seo:
-  date_modified: 2020-09-18 15:00:00 -0800
+  date_modified: 2020-09-18 15:00:00 -0700
 #image: /assets/img/YYYY-MM-DD-article/image.png
 ---
 

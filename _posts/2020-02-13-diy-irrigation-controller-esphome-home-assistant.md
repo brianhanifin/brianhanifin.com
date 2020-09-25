@@ -1,10 +1,10 @@
 ---
 title: "DIY Irrigation Controller"
-date: 2020-02-13 12:30:00 -0800
+date: 2020-02-13 12:30:00 -0700
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2020-02-14 14:45:00 -0800
+  date_modified: 2020-02-14 14:45:00 -0700
 image: /assets/img/2020-02-13-irrigation-controller/controller.jpg
 ---
 

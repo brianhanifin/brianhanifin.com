@@ -1,10 +1,10 @@
 ---
 title: Wife Approval Factor (WAF) Crisis
-date: 2019-12-29 09:15:00 -0800
+date: 2019-12-29 09:15:00 -0700
 categories: [General]
 tags: [Home Assistant]
 seo:
-  date_modified: 2019-12-29 09:15:00 -0800
+  date_modified: 2019-12-29 09:15:00 -0700
 # sticky: true
 ---
 
