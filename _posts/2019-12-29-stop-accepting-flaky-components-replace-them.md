@@ -1,21 +1,21 @@
 ---
-title: Wife Approval Factor (WAF) Crisis
+title: Smart Home Confidence Crisis
 date: 2019-12-29 09:15:00 -0700
 categories: [General]
 tags: [Home Assistant]
 seo:
-  date_modified: 2019-12-29 09:15:00 -0700
+  date_modified: 2020-12-15 09:00:00 -0700
 # sticky: true
 ---
 
 ## How to stop accepting flaky components, and start replacing them
 
-A few months ago [I posted a message in the Home Assistant Community](https://community.home-assistant.io/t/waf-crisis-how-to-stop-accepting-flaky-components-and-start-replacing-them/138066)
-outlining the problems that were driving down the acceptance of my Home Automation hobby at my house.
+A few months ago [I posted a message in the Home Assistant Community](https://community.home-assistant.io/t/138066)
+outlining the problems that were driving down the acceptance of my Home Automation hobby.
 
 If 9 out of 10 devices work as they should, that 10th flaky device, which I think works most of the time but
-sometimes doesn’t work, is the thing my wife latches onto. She has gone from being pleasantly accepting of
-most things (and some automations have delighted her) to becoming more and more irritated.
+sometimes doesn't work, is the thing my family remembers. My family has gone from being pleasantly accepting 
+of most things (and some automations have delighted everyone) to becoming more and more annoyed.
 
 Examples of automations that delight:
 
@@ -29,14 +29,14 @@ Examples of flakiness that irritates:
 me realizing.
 * Bedroom light switch: just wouldn't turn off almost every evening for about a month!
 
-Anyway, the WAF was awfully low then. I couldn't blame her as I find those things annoying as well...
-especially when they kill one of her outdoor plants.
+Anyway, my family approval of my hobby was awfully low. I couldn't blame them as I find those things annoying
+as well... especially when they kill one of our outdoor plants.
 
 There were several things stopping me from replacing components like these.
 
-* **Stubbornness.** I don’t feel like I should have to replace a thing. It is supposed to work, so it should
+* **Stubbornness.** I don't feel like I should have to replace a thing. It is supposed to work, so it should
 just work better!
-* **Cost.** I don’t want to replace one expensive thing, with another thing.
+* **Cost.** I don't want to replace one expensive thing, with another thing.
 * **Uncertainty.** Who knows if the thing I replace it with will work any better?
 
 I was finally able to convince myself the money I was saving for a CNC machine would be better spent on
