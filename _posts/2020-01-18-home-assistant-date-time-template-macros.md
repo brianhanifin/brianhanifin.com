@@ -4,7 +4,7 @@ date: 2020-01-18 21:00:00 -0700
 categories: [Code Snippets]
 tags: [Home Assistant, Jinja]
 seo:
-  date_modified: 2020-01-18 21:00:00 -0700
+  date_modified: 2021-02-02 16:00:00 -0700
 ---
 
 Over time I have created a large library of date and time manipulation code which are used in my
@@ -127,6 +127,8 @@ Reference: [bennadel.com](https://www.bennadel.com/blog/1446-getting-the-nth-occ
 {% set seconds = now().strftime("%S")|int %}
 {% set ampm = now().strftime("%p")|int %}
 {% set unix_timestamp = as_timestamp(now())|int %}
+
+{% set fifteen_minutes_ago = strptime(now(),"%Y-%m-%dT%H:%M:%S.000Z") - timedelta( minutes=15 ) %}
 {% endraw %}```
 
 ### Time differences
