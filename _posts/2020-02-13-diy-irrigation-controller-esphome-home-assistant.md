@@ -4,9 +4,14 @@ date: 2020-02-13 12:30:00 -0700
 categories: [Project]
 tags: [ESPHome, Home Assistant]
 seo:
-  date_modified: 2020-02-14 14:45:00 -0700
+  date_modified: 2021-02-18 9:45:00 -0700
 image: /assets/img/2020-02-13-irrigation-controller/controller.jpg
 ---
+
+*Articles in this series:*
+1. *Hardware, Electronics, and ESPHome code*
+2. *[Lovelace User Interface](../diy-irrigation-controller-lovelace-user-interface-home-assistant/)*
+3. *[Entities & Simplified User Interface](../diy-irrigation-controller-lovelace-ui-update/)*
 
 <div style="float:right;"><img src="/assets/img/2020-02-13-irrigation-controller/06t.jpg"></div>This project took a long time to put together. There were a lot more frustrations than I expected. At times I had concerns about being able to pull it off. But I am prouder of this accomplishment, than anything else I have done with Home Assistant!!!
 

@@ -2,17 +2,22 @@
 title: "DIY Irrigation Controller: Lovelace User Interface"
 date: 2020-04-28 13:00:00 -0700
 categories: [Project]
-tags: [Lovelace, Home Assistant]
+tags: [Lovelace, Home Assistant, ESPHome]
 seo:
-  date_modified: 2020-04-28 13:00:00 -0700
+  date_modified: 2021-02-18 9:45:00 -0700
 image: /assets/img/2020-02-13-irrigation-controller/ui1t.png
 ---
 
-## Irrigation Controller Part 2
+*Articles in this series:*
+1. *[Hardware, Electronics, and ESPHome code](../diy-irrigation-controller-esphome-home-assistant/)*
+2. *Lovelace User Interface*
+3. *[Entities & Simplified User Interface](../diy-irrigation-controller-lovelace-ui-update/)*
+
+## DIY Irrigation Controller Part 2
 
 While my the Irrigation Controller can be manually started and stopped with physical buttons, the primary user interface was always intended to be built in Lovelace.
 
-### Reliability
+### Reliability Update
 
 Before I describe how I created the interface I have great news! In the 2 months since I put the controller into service it has been rock solid! At the moment the Uptime is up to 248 hours since the last time it restarted. The only times it has been restarted has been once to upload a tweak to my ESPHome code, and the second one was for a neighborhood-wide power outage!!! :)
 

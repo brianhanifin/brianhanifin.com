@@ -1,18 +1,19 @@
 ---
 title: "DIY Irrigation Controller: Home Assistant Integration"
-date: 2021-02-18 9:00:00 -0700
+date: 2021-02-18 9:45:00 -0700
 categories: [Project]
 tags: [Lovelace, Home Assistant, ESPHome]
 seo:
-  date_modified: 2021-02-18 9:00:00 -0700
+  date_modified: 2021-02-18 9:45:00 -0700
 image: /assets/img/2021-02-18-irrigation-controller/ui.png
 ---
 
-## Home Assistant Entities & Simplified User Interface
+*Articles in this series:*
+1. *[Hardware, Electronics, and ESPHome code](../diy-irrigation-controller-esphome-home-assistant/)*
+2. *[Lovelace User Interface](../diy-irrigation-controller-lovelace-user-interface-home-assistant/)*
+3. *Entities & Simplified User Interface*
 
-*Previous articles in this series:*
-1. *[DIY Irrigation Controller: Hardware, Electronics, and ESPHome code](../diy-irrigation-controller-esphome-home-assistant/)*
-2. *[Lovelace User Interface](../diy-irrigation-controller-lovelace-user-interface-home-assistant/) <- skip this and read the article below instead ;)*
+## Home Assistant Entities & Simplified User Interface
 
 Your many questions helped me realize that I totally dropped the ball when I attempted to share how I
 created the Lovelace User Interface (UI) for my DIY Irrigation Project. Not only did I overly complicate
