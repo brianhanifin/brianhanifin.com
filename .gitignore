@@ -12,3 +12,6 @@ Gemfile.lock
 
 # bundle cache
 vendor
+
+# unRAID Recycle Bin
+.Recycle.Bin
