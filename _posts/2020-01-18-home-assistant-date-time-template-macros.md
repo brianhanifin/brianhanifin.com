@@ -4,7 +4,7 @@ date: 2020-01-18 21:00:00 -0700
 categories: [Code Snippets]
 tags: [Home Assistant, Jinja]
 seo:
-  date_modified: 2021-02-02 16:00:00 -0700
+  date_modified: 2021-02-28 18:30:00 -0700
 ---
 
 Over time I have created a large library of date and time manipulation code which are used in my
@@ -24,24 +24,34 @@ automations and scripts. I plan to update this post with the snippets as I add t
 {% set this_year = now().strftime("%Y")|int %}
 {% endraw %}```
 
+### timedelta()
+
+```yaml{% raw %}
+# Calculate one week from today.
+{{ as_timestamp(now()) + timedelta(days=7) }}
+
+# Calculate one month ago.
+{{ as_timestamp(now()) - timedelta(month=1) }}
+{% endraw %}```
+
 ### dayofweek_number(dayofweek)
 
 ```yaml{% raw %}
 {%- macro dayofweek_number(dayofweek) -%}
   {%- if dayofweek == "Sunday" or dayofweek == "Sun" -%}
-    1
+    0
   {%- elif dayofweek == "Monday" or dayofweek == "Mon" -%}
-    2
+    1
   {%- elif dayofweek == "Tuesday" or dayofweek == "Tue" -%}
-    3
+    2
   {%- elif dayofweek == "Wednesday" or dayofweek == "Wed" -%}
-    4
+    3
   {%- elif dayofweek == "Thursday" or dayofweek == "Thu" -%}
-    5
+    4
   {%- elif dayofweek == "Friday" or dayofweek == "Fri" -%}
-    6
+    5
   {%- elif dayofweek == "Saturday" or dayofweek == "Sat" -%}
-    7
+    6
   {%- endif -%}
 {%- endmacro -%}
 {% endraw %}```
@@ -127,16 +137,6 @@ Reference: [bennadel.com](https://www.bennadel.com/blog/1446-getting-the-nth-occ
 {% set seconds = now().strftime("%S")|int %}
 {% set ampm = now().strftime("%p")|int %}
 {% set unix_timestamp = as_timestamp(now())|int %}
-
-{% set fifteen_minutes_ago = strptime(now(),"%Y-%m-%dT%H:%M:%S.000Z") - timedelta( minutes=15 ) %}
-{% endraw %}```
-
-### Time differences
-
-```yaml{% raw %}
-{% set seconds_difference = (as_timestamp(now()) - as_timestamp(last_update)) %}
-{% set minutes_difference = (seconds_difference) / 60 %}
-{% set hours_difference   = (seconds_difference) / 3600 %}
 {% endraw %}```
 
 ### Between hours
@@ -149,6 +149,25 @@ Reference: [bennadel.com](https://www.bennadel.com/blog/1446-getting-the-nth-occ
 {% else %}
 0.20
 {% endif %}
+{% endraw %}```
+
+### timedelta()
+
+```yaml{% raw %}
+# 15 minutes ago.
+{{ as_timestamp(now()) - timedelta(minutes=15) }}
+
+# 12 hours from now.
+{{ as_timestamp(now()) + timedelta(hours=12) }}
+{% endraw %}```
+
+### Time difference
+
+```yaml{% raw %}
+# How long has it been since the last update?
+{% set seconds_difference = (as_timestamp(now()) - as_timestamp(last_update)) %}
+{% set minutes_difference = (seconds_difference) / 60 %}
+{% set hours_difference   = (seconds_difference) / 3600 %}
 {% endraw %}```
 
 ### `add_time()`
