@@ -8,10 +8,11 @@ seo:
 image: /assets/img/2020-02-13-irrigation-controller/controller.jpg
 ---
 
-*Articles in this series:*
-1. *Hardware, Electronics, and ESPHome code*
-2. *[Lovelace User Interface](../diy-irrigation-controller-lovelace-user-interface-home-assistant/)*
-3. *[Entities & Simplified User Interface](../diy-irrigation-controller-lovelace-ui-update/)*
+_Articles in this series:_
+
+1. _Hardware, Electronics, and ESPHome code_
+2. _[Lovelace User Interface](../diy-irrigation-controller-lovelace-user-interface-home-assistant/)_
+3. _[Entities & Simplified User Interface](../diy-irrigation-controller-lovelace-ui-update/)_
 
 <div style="float:right;"><img src="/assets/img/2020-02-13-irrigation-controller/06t.jpg"></div>This project took a long time to put together. There were a lot more frustrations than I expected. At times I had concerns about being able to pull it off. But I am prouder of this accomplishment, than anything else I have done with Home Assistant!!!
 
@@ -45,15 +46,16 @@ After seeing [several][inspiration1] [other people][inspiration2] create Irrigat
 
 1. Create a reliable Irrigation Controller.
 2. Make it self sufficient:
-  * Does not require Home Assistant to start a schedule session.
-  * Use Home Assistant only to edit the schedule, manually start a cycle, and to monitor progress.
+
+- Does not require Home Assistant to start a schedule session.
+- Use Home Assistant only to edit the schedule, manually start a cycle, and to monitor progress.
 
 ### Irrigation Controller Supplies
 
-* [Sonoff 4CH Pro R2][amazon-sonoff4chpro]
-* [Elk TRG2440 24VAC, 40 VA AC Transformer][amazon-transformer]
-* [Irrigation Controller Outdoor Enclosure][amazon-enclosure] (Optional: if you already have a safe place for your controller).
-* Electrical extension cord: I ended up cutting a spare extension cord I had, I stripped the ends of the wires to power the Sonoff.
+- [Sonoff 4CH Pro R2][amazon-sonoff4chpro] (<- the new R3 should work)
+- [Elk TRG2440 24VAC, 40 VA AC Transformer][amazon-transformer]
+- [Irrigation Controller Outdoor Enclosure][amazon-enclosure] (Optional: if you already have a safe place for your controller).
+- Electrical extension cord: I ended up cutting a spare extension cord I had, I stripped the ends of the wires to power the Sonoff.
 
 ## What was needed regardless of the controller used
 
@@ -63,9 +65,9 @@ These items would have been needed if I had purchased a $200-$300 off the shelf 
 
 Note: I already existing Drip System pipes running to this location, so I only need to replace the control solenoid portion.
 
-* [Orbit 3-Valve Heavy Duty Preassembled Manifold][amazon-manifold]
-* Outdoor wiring to connect the solenoids to the Sonoff.
-* Water resistant wire nuts to connect the wires to the solenoid wires (included in the manifold kit from above).
+- [Orbit 3-Valve Heavy Duty Preassembled Manifold][amazon-manifold]
+- Outdoor wiring to connect the solenoids to the Sonoff.
+- Water resistant wire nuts to connect the wires to the solenoid wires (included in the manifold kit from above).
 
 ## Replacing the old controller
 
@@ -197,9 +199,9 @@ sensor:
     entity_id: input_number.irrigation_zone1_duration
     on_value:
       then:
-      - sensor.template.publish:
-          id: irrigation_zone1_duration
-          state: !lambda return id(ui_zone1_duration).state;
+        - sensor.template.publish:
+            id: irrigation_zone1_duration
+            state: !lambda return id(ui_zone1_duration).state;
 
   # Store durations.
   - platform: template
@@ -376,7 +378,7 @@ amzn_assoc_asins = "B0793NYYPZ,B0007N5LJK,B000VYGMF2,B001H1NGOI";
 [esphome-time]: https://esphome.io/components/time.html
 [inspiration1]: https://community.home-assistant.io/t/my-garden-irrigation/99686
 [inspiration2]: https://github.com/bruxy70/Irrigation-with-display
-[amazon-sonoff4chpro]: https://amzn.to/2HlcNJx
+[amazon-sonoff4chpro]: https://amzn.to/3etA8Kp
 [amazon-transformer]: https://amzn.to/37q81VN
 [amazon-enclosure]: https://amzn.to/38nwIDC
 [amazon-manifold]: https://amzn.to/2UOBTs1
