@@ -39,8 +39,6 @@ service call.
 
 This section of variables are defined before the `sequence` section.
 
-
-{% github_sample_ref /brianhanifin/Home-Assistant-Config/blob/e62c82b9ea4315b8810cf5707d872aafbcf17de9/scripts/notifications/inovelli_led.yaml %}
 ```yaml{%raw%}
 variables:
   model: |
