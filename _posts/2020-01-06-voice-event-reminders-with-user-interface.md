@@ -15,6 +15,11 @@ I got caught up on the Node-Red hype train for a short while, but that ride didn
 begin the new decade I decided to retire Node-Red for good. To do so required me to move my many
 Event Reminders over to YAML and I wanted to really push my skills with this project.
 
+## Updates
+
+* **2022-01-22**
+  * Fix broken links to my Github repository.
+
 ## Project Requirements
 
 [![event-reminder1-thumbnail]{:style="float:right; margin-left: 1em;"}][event-reminder1]
@@ -213,17 +218,17 @@ on this blog.
 [custom-fold]: https://github.com/thomasloven/lovelace-fold-entity-row
 [custom-text]: https://github.com/gadgetchnnel/lovelace-text-input-row
 
-[lovelace-view]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/lovelace/views/05_event_reminders.yaml
-[lovelace-button]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/lovelace/templates/button.yaml
-[lovelace-button_pill2]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/lovelace/templates/button_pill2.yaml
-[lovelace-button_row7]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/lovelace/templates/button_row7.yaml
-[lovelace-event_reminder]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/lovelace/templates/event_reminder.yaml
-[lovelace-heading]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/lovelace/templates/heading.yaml
+[lovelace-view]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/views/05_event_reminders.yaml
+[lovelace-button]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/templates/button.yaml
+[lovelace-button_pill2]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/templates/button_pill2.yaml
+[lovelace-button_row7]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/templates/button_row7.yaml
+[lovelace-event_reminder]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/templates/event_reminder.yaml
+[lovelace-heading]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/templates/heading.yaml
 
 [custom-alexa]: https://github.com/custom-components/alexa_media_player
 [custom-alexa-notify]: https://github.com/custom-components/alexa_media_player/wiki/Notification-Component
 
 [packages]: https://www.home-assistant.io/docs/configuration/packages
-[package-folder]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/integrations/event_reminders/
-[package1]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/integrations/event_reminders/event_reminder_1_package.yaml
-[package-common]: https://github.com/brianhanifin/Home-Assistant-Config/blob/master/integrations/event_reminders/event_reminder_common_package.yaml
+[package-folder]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/integrations/event_reminders/
+[package1]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/integrations/event_reminders/event_reminder_1_package.yaml
+[package-common]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/integrations/event_reminders/event_reminder_common_package.yaml
