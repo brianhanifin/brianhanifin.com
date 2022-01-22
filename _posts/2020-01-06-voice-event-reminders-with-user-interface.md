@@ -226,7 +226,7 @@ on this blog.
 [lovelace-heading]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/lovelace/templates/heading.yaml
 
 [custom-alexa]: https://github.com/custom-components/alexa_media_player
-[custom-alexa-notify]: https://github.com/custom-components/alexa_media_player/wiki/Notification-Component
+[custom-alexa-notify]: https://github.com/custom-components/alexa_media_player/wiki/Configuration%3A-Notification-Component
 
 [packages]: https://www.home-assistant.io/docs/configuration/packages
 [package-folder]: https://github.com/brianhanifin/Home-Assistant-Config/blob/ce419ffc8dfb861c4310be9239d2949e6edd70bc/integrations/event_reminders/
