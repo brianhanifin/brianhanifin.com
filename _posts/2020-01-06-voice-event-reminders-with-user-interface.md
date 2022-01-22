@@ -4,7 +4,7 @@ date: 2020-01-06 21:00:00 -0700
 categories: [Project]
 tags: [Home Assistant, Alexa, Lovelace]
 seo:
-  date_modified: 2020-01-06 21:00:00 -0700
+  date_modified: 2022-01-22 09:00:00 -0700
 ---
 
 Some of my favorite "quality of life" automations are: 1.) an LED strip that turns on when anyone
