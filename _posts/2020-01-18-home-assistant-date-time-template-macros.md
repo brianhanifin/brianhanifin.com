@@ -4,7 +4,7 @@ date: 2020-01-18 21:00:00 -0700
 categories: [Code Snippets]
 tags: [Home Assistant, Jinja]
 seo:
-  date_modified: 2022-05-06 14:00:00 -0700
+  date_modified: 2022-05-06 17:45:00 -0700
 ---
 
 Over time I have created a large library of date and time manipulation code which are used in my
@@ -204,4 +204,59 @@ Pass a negative number to substract minutes instead of adding.
 {% set minutes_to_add = 5 %}
 {% set boys = add_time(states("sensor.boys_room_next_alarm"), minutes_to_add) %}
 {% set brian = add_time(states("sensor.wakeup_brian_time"), minutes_to_add) %}
+{% endraw %}```
+
+### Bonus: generate a list of dates
+I use the template code below to generate a list of dates to add summer break to a school day sensor.
+
+```yaml{% raw %}
+{%- macro last_dayofmonth(month, year) -%}
+  {%- set daysinmonths = [31,28,31,30,31,30,31,31,30,31,30,31] -%}
+  {%- set month = month|default(0)|int -%}
+  {%- set year = year|default(0)|int -%}
+
+  {# Simplified leap year calculation. See https://www.mathsisfun.com/leap-years.html #}
+  {%- set isleapyear = year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) -%}
+
+  {%- set monthindex = month-1 -%}
+  {%- if month == 2 and isleapyear -%}
+    {{ daysinmonths[monthindex]+1 }}
+  {%- else -%}
+    {{ daysinmonths[monthindex] }}
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- set year = now().year %}
+{%- set months = [6,7,8] %}
+{%- set days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31] %}
+{%- for month in months %}
+  {%- set lastday = last_dayofmonth(month, year)|int %}
+  {%- for day in days if day <= lastday %}
+- "{{ year ~"-"~ "%02d"|format(month) ~"-"~ "%02d"|format(day) }}"
+  {%- endfor %}
+{%- endfor %}
+{% endraw %}```
+
+configuration.yaml snippet
+
+```yaml{% raw %}
+binary_sensor:
+  platform: workday
+  name: School day
+  country: US
+  province: CA
+  excludes: [sat, sun, holiday]
+  remove_holidays:
+    - Susan B. Anthony Day
+  add_holidays:
+    - "2022-04-04" # Spring recess
+    - "2022-04-05"
+    - "2022-04-06"
+    - "2022-04-07"
+    - "2022-04-08"
+    - "2022-04-11"
+    - "2022-04-12"
+    - "2022-04-13"
+    - "2022-04-14"
+    - "2022-04-15"
 {% endraw %}```
