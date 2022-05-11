@@ -4,7 +4,7 @@ date: 2020-01-18 21:00:00 -0700
 categories: [Code Snippets]
 tags: [Home Assistant, Jinja]
 seo:
-  date_modified: 2022-05-06 17:45:00 -0700
+  date_modified: 2022-05-10 19:45:00 -0700
 ---
 
 Over time I have created a large library of date and time manipulation code which are used in my
@@ -157,11 +157,20 @@ Reference: [bennadel.com](https://www.bennadel.com/blog/1446-getting-the-nth-occ
 {% endraw %}```
 
 ### Between hours
-
 ```yaml{% raw %}
-{% if now().hour < 12 and now().hour > 6 %}
+# Standard way
+{% if 6 <= now().hour and now().hour < 12 %}
 0.25
-{% elif now().hour > 12 and now().hour < 17 %}
+{% elif 12 <= now().hour and now().hour < 17 %}
+0.40
+{% else %}
+0.20
+{% endif %}
+
+# Shorter way
+{% if 6 <= now().hour < 12 %}
+0.25
+{% elif 12 <= now().hour < 17 %}
 0.40
 {% else %}
 0.20
